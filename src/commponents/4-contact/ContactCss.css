@@ -1,0 +1,97 @@
+/* ===========
+table 
+=============
+1-contact us head 
+2-contact us form 
+3-animation */
+.contact.flex {
+  gap: 1rem;
+}
+.contact.flex .info {
+  flex-grow: 1;
+}
+.contact.flex .flex {
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+/*  1-contact us head */
+.contact.flex .head .title {
+  color: var(--title);
+}
+.contact.flex .head .title .icon-email {
+  margin-right: 0.7rem;
+  font-size: 1.7rem;
+  color: var(--subtitle);
+}
+.contact.flex .head .subtitle {
+  color: var(--subtitle);
+}
+/*  1-contact us form */
+.contact.flex .form {
+  color: var(--subtitle);
+  align-items: center;
+}
+.contact.flex .form .textarea {
+  display: flex;
+  align-items: center;
+}
+.contact.flex .form .textarea > textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.contact.flex .form .email,
+.contact.flex .form .textarea {
+  flex-direction: row;
+  justify-content: center;
+}
+.contact.flex .form .email > input,
+.contact.flex .form .textarea > textarea,
+.contact.flex .form .submit {
+  min-width: 300px;
+  margin-left: 1rem;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  color: var(--title);
+  background-color: rgba(36, 37, 46, 0.15);
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+.contact.flex .form .email > input:focus,
+.contact.flex .form .textarea > textarea:focus,
+.contact.flex .form .email > input:hover,
+.contact.flex .form .textarea > textarea:hover,
+.contact.flex .form .submit:hover {
+  border: 1px solid var(--blue);
+}
+
+.contact.flex .form .submit {
+  font-size: 1.2rem;
+  text-align: center;
+  align-self: center;
+  width: 100px;
+}
+.contact.flex .form > p {
+  flex-direction: row;
+  align-items: center;
+}
+/* 3- anamiation
+ */
+/* 4-Media queries */
+@media (max-width: 992px) {
+  .contact.flex .anmiation {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .contact.flex .form .email > input,
+  .contact.flex .form .textarea > textarea,
+  .contact.flex .form .submit {
+    min-width: 200px;
+    width: 90%;
+  }
+}

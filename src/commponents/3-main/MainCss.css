@@ -1,0 +1,147 @@
+/* =================
+ table of contents
+==================== 
+1-left-section
+2-right-section
+3-Media queries
+*/
+main.flex {
+  gap: 1.5rem;
+  align-items: start;
+}
+/* =================
+1-left-section
+==================== 
+*/
+main .left-section {
+  flex-direction: column;
+  gap: 0.8rem;
+}
+main .left-section button {
+  background-color: rgba(36, 37, 46, 1);
+  width: 10rem;
+  padding: 0.7rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  opacity: 0.7;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+}
+main .left-section button:hover {
+  opacity: 1;
+}
+main .left-section button.active {
+  border: 2px solid var(--blue);
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  opacity: 1;
+}
+/* =================
+2-right-section
+==================== 
+*/
+main .right-section {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: auto;
+}
+main .right-section .card {
+  width: 250px;
+  height: 350px;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(93, 188, 252, 0.3);
+  box-shadow: 1px 1px 1px var(--subtitle);
+  transition: 0.4s;
+}
+main .right-section .card:hover {
+  border-color: var(--blue);
+  scale: 1.01;
+  rotate: 1deg;
+  cursor: pointer;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.005),
+    rgba(255, 255, 255, 0.005)
+  );
+}
+main .right-section .card .box {
+  padding: 1rem 0.5rem;
+}
+main .right-section .card > img {
+  background-color: rgba(36, 37, 46, 1);
+  width: 250px;
+  height: 180px;
+}
+main .right-section .card .title {
+  color: var(--title);
+  text-transform: capitalize;
+}
+main .right-section .card .subtitle {
+  margin: 0.7rem 0;
+  color: var(--subtitle);
+}
+main .right-section .card .icons.flex {
+  font-size: 1.3rem;
+  justify-content: space-between;
+}
+main .right-section .card .icons.flex > .flex {
+  gap: 1rem;
+}
+main .right-section .card .icon-link,
+main .right-section .card .icon-github {
+  color: var(--subtitle);
+}
+main .right-section .card .icon-link:hover,
+main .right-section .card .icon-github:hover {
+  color: var(--icon-hover);
+  font-size: 1.5rem;
+}
+main .right-section .card .icons.flex .icon-arrow {
+  color: var(--blue);
+  font-size: 1.2rem;
+  font-family: "Roboto", system-ui !important;
+}
+@keyframes arrowmove {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+main .right-section .card .icons.flex .icon-arrow:hover {
+  font-size: 1.3rem;
+}
+main .right-section .card .icons.flex .icon-arrow:hover .icon-arrow-right {
+  animation: arrowmove 0.4s infinite;
+}
+
+main .right-section .card .icons.flex .icon-arrow .icon-arrow-right {
+  margin-top: 5px;
+}
+/* 3-Media queries */
+@media (max-width: 992px) {
+  main.flex {
+    flex-direction: column;
+  }
+  main .left-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+}
+@media (max-width: 576px) {
+  main .left-section button {
+    font-size: 0.8;
+    width: fit-content;
+    padding: 7px;
+    opacity: 0.85;
+  }
+}

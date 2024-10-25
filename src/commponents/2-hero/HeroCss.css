@@ -1,0 +1,71 @@
+.hero {
+  margin: 2rem 0;
+}
+.hero .info {
+  flex-grow: 1;
+}
+
+.hero .info .avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid salmon;
+  padding: 3px;
+  box-shadow: 2px 2px 20px rgb(165, 125, 125) inset;
+}
+.hero .info .avatar .icon-verified {
+  color: var(--blue);
+  font-size: 20px;
+}
+.hero .info .name {
+  flex-grow: 1;
+  text-align: center;
+}
+.hero .info .name h1 {
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+.hero .info .title {
+  color: var(--title);
+  margin: 1rem 0;
+}
+.hero .info .subtitle {
+  color: var(--subtitle);
+}
+.hero .info .socail {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+.hero .info .socail .icon:hover {
+  transition: 0.3s;
+  font-size: 1.45rem;
+}
+.hero .info .socail .icon-facebook {
+  color: #1877f2;
+}
+.hero .info .socail .icon-x {
+  color: #657786;
+}
+
+.hero .info .socail .icon-github {
+  color: var(--subtitle);
+}
+.hero .info .socail .icon-linkedin {
+  color: #0a66c2;
+}
+.hero .anmiation {
+  translate: 80px 40px;
+}
+/* Media queres */
+@media (max-width: 992px) {
+  .hero .anmiation {
+    display: none;
+  }
+}
+@media (max-width: 440px) {
+  .hero .info .imgname {
+    flex-direction: column;
+  }
+}

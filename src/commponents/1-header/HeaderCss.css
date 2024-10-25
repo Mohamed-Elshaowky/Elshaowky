@@ -1,0 +1,135 @@
+/*===================
+ table of contents
+ ====================
+ 1-Header Design 
+ 2-Modal
+ 3-Button & icons
+ 4- Mekia query
+  */
+
+/* =============
+   1-Header Design  
+ =============*/
+header.flex {
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-top: 1rem;
+}
+header.flex nav {
+  background-color: var(--bgHeader);
+  padding: 0.77rem 1.7rem;
+  border-radius: 3rem;
+  opacity: 0.9;
+  box-shadow: 2px 1px 20px rgb(31, 31, 31);
+}
+header button.menu {
+  display: none;
+}
+header nav ul.flex {
+  gap: 16px;
+}
+header ul li a {
+  color: var(--title);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+header ul li a:hover {
+  opacity: 1;
+  font-size: 0.92rem;
+  color: var(--blue);
+}
+header button {
+  font-size: 1.2rem;
+}
+/* =============
+   2-Modal 
+ =============*/
+header .fixed {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.91);
+  z-index: 999;
+  backdrop-filter: blur(3px);
+}
+/* Animation Modal */
+@keyframes mymove {
+  0% {
+    scale: 0.7;
+  }
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+header .fixed ul.modal {
+  scale: 1;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--secondary);
+  animation: mymove 0.5s;
+}
+header .fixed ul.modal li {
+  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 0;
+}
+header .fixed ul.modal li:last-child,
+header .fixed ul.modal li:first-child {
+  border: none;
+}
+header .fixed ul.modal li:first-child {
+  text-align: right;
+  padding: 0;
+}
+/* =============
+ 3-Button & icons
+ =============*/
+
+header .mode,
+header .icon-menu {
+  background-color: var(--bgHeader);
+  width: 2.4rem;
+  height: 2.4rem;
+  color: var(--subtitle);
+  border-radius: 50%;
+  border: 1px solid rgba(250, 128, 114, 0.502);
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 10px var(--blue);
+}
+header .mode:hover,
+header .icon-menu:hover {
+  color: var(--title);
+  border-color: salmon;
+}
+header .icon-close {
+  font-size: 1.3rem;
+  color: var(--subtitle);
+  transition: 0.2s;
+}
+header .icon-close:hover {
+  font-size: 1.6rem;
+  color: crimson;
+  rotate: 180deg;
+}
+header .icon-sun {
+  color: rgb(176, 176, 8);
+}
+/* =============
+ 4-Media quire
+ =============*/
+@media (max-width: 768px) {
+  header.flex nav {
+    display: none;
+  }
+  header.flex button.menu {
+    display: flex;
+  }
+}
